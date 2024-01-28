@@ -1,5 +1,11 @@
+*{
+    box-sizing: border-box;
+}
+
 a{
-    color: inherit;
+    color: cornflowerblue;
+    font-size: 16px;
+    line-height: 20px;
     text-decoration: none;
     transition: color 0.2 ease-in;
 }
@@ -7,6 +13,31 @@ a{
 a:hover{
     color: #626262;
 }
+
+h1{
+    color: #222222;
+    font-size: 28px;
+    line-height: 36px;
+    font-weight: bold;
+}
+
+h2{
+    color: coral;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 80px;
+}
+
+p{
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 30px;
+    color: #7D7987;
+}
+
+
 
 img{
     display: block;
