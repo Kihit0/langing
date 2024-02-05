@@ -1,90 +1,246 @@
-*{
-    box-sizing: border-box;
+/* MAIN */
+@font-face {
+  font-family: "gilroy-regular";
+  src: url("../_assets/fonts/gilroy-regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "gilroy-medium";
+  src: url("../_assets/fonts/gilroy-medium.ttf") format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "gilroy-semibold";
+  src: url("../_assets/fonts/gilroy-semibold.ttf") format("truetype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "gilroy-bold";
+  src: url("../_assets/fonts/gilroy-bold.ttf") format("truetype");
+  font-weight: 700;
+}
+/* @use "mixin/index.scss"; */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-a{
-    color: cornflowerblue;
-    font-size: 16px;
-    line-height: 20px;
-    text-decoration: none;
-    transition: color 0.2 ease-in;
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
 }
 
-a:hover{
-    color: #626262;
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
 }
 
-h1{
-    color: #222222;
-    font-size: 28px;
-    line-height: 36px;
-    font-weight: bold;
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
 }
 
-h2{
-    color: coral;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 80px;
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
 }
 
-p{
-    font-style: normal;
-    font-weight: 300;
-    font-size: 18px;
-    line-height: 30px;
-    color: #7D7987;
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
 }
 
-
-
-img{
-    display: block;
-    width: 100%;
-    height: 100%;
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
 }
 
-
-.container{
-    width: 100%;
-    max-width: 1170px;
-    margin: 0 auto;
-    padding: 0 15px ;
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
 }
 
-.nav{
-    display: flex;
-    justify-content: space-between;
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
 }
 
-
-.nav-ul{
-    display: flex;
-    list-style: none;
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
 }
 
-.nav-ul .nav-li{
-    margin-right: 2rem;
-    font-size: 20px;
+/* Make sure textarea without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
 }
 
-.nav-ul .nav-li:last-child{
-    margin-right: 0;
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
 }
 
-
-.items-wrapper{
-    display: flex;
-
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
-.item{
-    margin-right: 2rem;
-    width: 300px;
+.container {
+  width: 100%;
+  max-width: 1170px;
+  padding: 15px 0;
+  margin: 0 auto;
 }
 
-.item-img{
-    width: 100%;
-    height: auto;
+/* STYLES */
+.header {
+  padding: 15px;
 }
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-nav__logo {
+  width: 10%;
+  display: flex;
+  align-items: center;
+}
+.header-nav__logo-img {
+  width: 35px;
+  height: 40px;
+}
+.header-nav__logo-img .img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.header-nav__logo p {
+  font-family: "gilroy-bold";
+  font-size: 24px;
+}
+.header-nav__logo p span {
+  color: #F25822;
+}
+.header-nav__ul {
+  width: 90%;
+  display: flex;
+  justify-content: end;
+}
+.header-nav__ul-li {
+  margin-right: 30px;
+  font-family: "gilroy-medium";
+  line-height: 16px;
+}
+.header-nav__ul-li:last-child {
+  margin-right: 0;
+}
+.header-nav__ul-li .active {
+  color: #F25822;
+}
+.header-content {
+  padding-top: 150px;
+  display: flex;
+}
+.header-content__main {
+  width: 56.5%;
+}
+.header-content__main h1 {
+  font-family: "gilroy-bold";
+  font-size: 60px;
+  line-height: 71px;
+  padding-bottom: 15px;
+}
+.header-content__main h1 span {
+  position: relative;
+}
+.header-content__main h1 span::after {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 0;
+  width: 314px;
+  height: 76px;
+  border-radius: 314px/76px;
+  border: 1px solid #F25822;
+}
+.header-content__main p {
+  width: 430px;
+  font-family: "gilroy-medium";
+  font-size: 20px;
+  line-height: 24px;
+  color: #888888;
+  padding-bottom: 30px;
+}
+.header-content__main-btns {
+  display: flex;
+}
+.header-content__main-btns__watch {
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+  font-size: 15px;
+  font-family: "gilroy-bold";
+  line-height: 18px;
+  color: #AAAAAA;
+}
+.header-content__main-btns__watch span {
+  margin-right: 15px;
+}
+.header-content__img {
+  width: 43.5%;
+}
+
+.btn {
+  font-size: 12px;
+  font-family: "gilroy-semibold";
+  color: white;
+  border-radius: 30px;
+}
+.btn-orange {
+  background-color: #F25822;
+  padding: 10px 15px;
+  box-shadow: 4px 4px 8px rgba(242, 88, 34, 0.2);
+  transition: background-color 0.2s ease-out;
+}
+.btn-orange:hover {
+  background-color: #f34709;
+}
+
+html {
+  font-size: 16px;
+  font-family: "gilroy-regular";
+}
+
+/*# sourceMappingURL=index.css.map */

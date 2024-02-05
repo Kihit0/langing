@@ -7,34 +7,61 @@
     <link rel="stylesheet" href="style/index.css" />
   </head>
   <body>
+    <!-- HEADER START -->
     <header class="header">
-      <div class="container">
-        <nav class="nav">
-          <h1 class="h1">Main Page</h1>
-          <ul class="nav-ul">
-            <li class="nav-li"><a href="#">Main page</a></li>
-            <li class="nav-li"><a href="pages/catalog.html">Catalog</a></li>
-            <li class="nav-li"><a href="pages/contact.html">Contact</a></li>
+      <div class="container header-wrapper">
+        <nav class="header-nav">
+          <a href="#" class="header-nav__logo">
+            <div class="header-nav__logo-img">
+              <img src="./_assets/img/logo.png" alt="logo" class="img" />
+            </div>
+            <p>Grow<span>Be</span></p>
+          </a>
+          <ul class="header-nav__ul" role="list">
+            <li class="header-nav__ul-li">
+              <a href="#" class="link active">Home</a>
+            </li>
+            <li class="header-nav__ul-li">
+              <a href="#" class="link">About Us</a>
+            </li>
+            <li class="header-nav__ul-li">
+              <a href="#" class="link">Service</a>
+            </li>
+            <li class="header-nav__ul-li submenu">
+              <a href="#" class="link submenu">Features</a>
+              <ul class="header-nav__ul-submenu"></ul>
+            </li>
+            <li class="header-nav__ul-li"><a href="#" class="link">Team</a></li>
+            <li class="header-nav__ul-li"><a href="#" class="link">Blog</a></li>
+            <li class="header-nav__ul-li">
+              <a href="#" class="link">Contact</a>
+            </li>
+            <li class="header-nav__ul-li">
+              <a href="#" class="btn btn-orange">Get Started</a>
+            </li>
           </ul>
         </nav>
         <div class="header-content">
-          <h2 class="h2">Welcome to the site</h2>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. In omnis
-            ut laudantium, iste soluta provident ullam. Dignissimos minus
-            commodi est expedita? Amet autem quasi esse? Labore, incidunt
-            dolores tenetur totam sed beatae voluptatibus fuga reprehenderit
-            possimus delectus eaque aperiam qui repudiandae. Minus porro
-            corrupti fuga eos doloribus numquam tempora optio excepturi
-            accusamus deleniti illo placeat reprehenderit consequuntur iusto qui
-            quam sint, consequatur tempore ipsam ducimus laudantium iste est
-            nihil eum! Quidem necessitatibus officia animi et voluptates
-            accusantium expedita tenetur similique corrupti facere culpa error
-            sapiente dicta cum, saepe omnis ut facilis suscipit harum numquam
-            eaque ipsum. Sed quae tempora vel!
-          </p>
+          <div class="header-content__main">
+            <h1>SEO & Digital </br><span>Marketing</span> For Your Website.</h1>
+            <p>
+              Provide all kind of seo services and help to improve seo ranking.
+              Globally incubate standards.
+            </p>
+            <div class="header-content__main-btns">
+              <a href="#" class="btn btn-orange">Start Now</a>
+              <a href="#" class="header-content__main-btns__watch">
+                <span><img src="_assets/img/watch.png" alt="watch-icon"></span>
+                Watch Video
+              </a>
+            </div>
+          </div>
+          <div class="header-content__img">
+            <img src="_assets/img/header.png" alt="header-img" class="img" />
+          </div>
         </div>
       </div>
     </header>
+    <!-- HEADER END -->
   </body>
 </html>

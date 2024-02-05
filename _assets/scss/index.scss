@@ -1,0 +1,15 @@
+/* MAIN */
+@import "./var/var.scss";
+@import "./fonts/fonts.scss";
+/* @use "mixin/index.scss"; */
+@import "./helpers/reset.scss";
+@import "./helpers/helpers.scss";
+
+/* STYLES */
+@import "./style/header.scss";
+@import "./style/btn.scss";
+
+html{
+    font-size: 16px;
+    font-family: "gilroy-regular";
+}
