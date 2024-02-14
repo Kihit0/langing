@@ -1,6 +1,10 @@
 .section{
     padding: 100px 0;
 
+    @media screen and (max-width: 991px) {
+        padding: 50px 0;
+    }
+
     &.section-gray{
         background-color: #fafafa;
     }

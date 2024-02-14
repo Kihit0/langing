@@ -4,13 +4,34 @@
     justify-content: space-between;
     flex-wrap: wrap;
 
+    @media screen and (max-width: 991px) {
+      justify-content: center;
+    }
+
     &-item {
       padding: 30px;
       width: 30%;
 
+      @media screen and (max-width: 991px) {
+        width: 55%;
+        margin-bottom: 30px;
+      }
+
+      @media screen and (max-width: 768px) {
+        width: 75%;
+      }
+
+      @media screen and (max-width: 480px) {
+        width: 100%;
+      }
+
       &.active {
         transform: scale(1.1);
         box-shadow: 15px 25px 56px #00000010;
+
+        @media screen and (max-width: 991px) {
+          transform: scale(1);
+        }
       }
 
       .icon {

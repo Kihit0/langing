@@ -11,6 +11,10 @@
       display: flex;
       align-items: center;
 
+      @media screen and (max-width: 991px) {
+        width: 100%;
+      }
+
       &-img {
         width: 35px;
         height: 40px;
@@ -37,6 +41,10 @@
       display: flex;
       justify-content: end;
 
+      @media screen and (max-width: 991px) {
+        display: none;
+      }
+
       &-li {
         margin-right: 30px;
         font-family: "gilroy-medium";
@@ -57,14 +65,35 @@
     padding-top: 100px;
     display: flex;
 
+    @media screen and (max-width: 991px) {
+      padding-top: 50px;
+      flex-direction: column;
+      justify-content: center;
+    }
+
     &__main {
       width: 56.5%;
+
+      @media screen and (max-width: 991px) {
+        text-align: center;
+        width: 100%;
+        margin-bottom: 30px;
+      }
 
       h1 {
         font-family: "gilroy-bold";
         font-size: 60px;
         line-height: 71px;
         padding-bottom: 15px;
+
+        @media screen and (max-width: 768px) {
+          font-size: 48px;
+          line-height: 120%;
+        }
+
+        @media screen and (max-width: 480px) {
+          font-size: 36px;
+        }
 
         span {
           position: relative;
@@ -77,6 +106,13 @@
             height: 76px;
             border-radius: 314px/76px;
             border: 1px solid $orange;
+
+            @media screen and (max-width: 480px) {
+              width: 169px;
+              height: 44px;
+              border-radius: 169px/44px;
+              left: 0;
+            }
           }
         }
       }
@@ -89,10 +125,26 @@
         color: #888888;
 
         padding-bottom: 30px;
+
+        @media screen and (max-width: 991px) {
+          margin: 0 auto;
+        }
+
+        @media screen and (max-width: 768px) {
+          font-size: 16px;
+        }
+
+        @media screen and (max-width: 480px) {
+          width: 100%;
+        }
       }
 
       &-btns {
         display: flex;
+
+        @media screen and (max-width: 991px) {
+          justify-content: center;
+        }
 
         &__watch {
           display: flex;
@@ -113,6 +165,12 @@
 
     &__img {
       width: 43.5%;
+
+      @media screen and (max-width: 991px) {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+      }
     }
   }
 }
