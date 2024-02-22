@@ -1,0 +1,75 @@
+.section-funfact {
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 56px 40px;
+    border: 1px solid #eeeeee;
+
+    @media screen and (max-width: 480px) {
+        padding: 28px 20px;
+      }
+  }
+
+  &__item {
+    width: 25%;
+    text-align: center;
+    position: relative;
+
+    @media screen and (max-width: 768px) {
+      width: 50%;
+      margin-bottom: 30px;
+    }
+
+    @media screen and (max-width: 480px) {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+
+    @for $i from 1 to 4 {
+      &:nth-child(#{$i}) {
+        &::after {
+          content: "";
+          position: absolute;
+          width: 16px;
+          height: 16px;
+          top: calc(50% - 16px);
+          right: 0;
+          border-radius: 50%;
+          background-color: nth($colorsAfter, $i);
+
+          @media screen and (max-width: 768px) {
+            @if ($i == 2) {
+              background-color: transparent;
+            }
+          }
+
+          @media screen and (max-width: 480px) {
+            top: 130px;
+            right: calc(50% - 8px);
+
+            @if ($i == 2) {
+              background-color: nth($colorsAfter, $i);
+            }
+          }
+        }
+      }
+    }
+
+    &-title {
+      font-size: 72px;
+      font-family: "gilroy-bold";
+      line-height: 120%;
+      color: $gray;
+
+      margin-bottom: 10px;
+    }
+
+    &-subtitle {
+      font-size: 16px;
+      font-family: "gilroy-semibold";
+      line-height: 150%;
+      color: $gray;
+    }
+  }
+}

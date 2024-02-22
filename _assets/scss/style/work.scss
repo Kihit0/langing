@@ -1,0 +1,120 @@
+.section-work {
+  &__wrapper {
+    display: flex;
+    align-items: center;
+
+    @media screen and (max-width: 991px) {
+      flex-direction: column;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    max-width: 862px;
+  }
+
+  &__content {
+    width: 100%;
+    max-width: 653px;
+
+    @media screen and (max-width: 991px) {
+      max-width: 100%;
+    }
+
+    &.container {
+      margin: 0;
+    }
+
+    &-title {
+      font-size: 44px;
+      font-family: "gilroy-bold";
+      line-height: 120%;
+      margin-bottom: 15px;
+
+      @media screen and (max-width: 991px) {
+        font-size: 36px;
+      }
+    }
+
+    &-subtitle {
+      font-size: 16px;
+      line-height: 160%;
+      color: $gray;
+      margin-bottom: 30px;
+    }
+
+    &-item {
+      display: flex;
+      padding: 24px;
+
+      &.active{
+        box-shadow: 15px 25px 56px #00000010;
+      }
+
+      @for $i from 1 through 3 {
+        &:nth-child(#{$i}) {
+          .section-work__content-item__img {
+            background-color: nth($colors, $i);
+          }
+        }
+      }
+
+      @media screen and (max-width: 991px) {
+        padding: 12px;
+      }
+
+      &__img {
+        width: 160px;
+        height: 100px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin-right: 24px;
+
+        border-radius: 50%;
+
+        @media screen and (max-width: 991px) {
+          width: 100px;
+        }
+
+        @media screen and (max-width: 768px) {
+          width: 160px;
+        }
+
+        img {
+          width: 40px;
+          height: 40px;
+
+          @media screen and (max-width: 991px) {
+            width: 36px;
+            height: 36px;
+          }
+
+          @media screen and (max-width: 768px) {
+            width: 30px;
+            height: 30px;
+          }
+        }
+      }
+
+      &__content {
+        &-title {
+          font-size: 24px;
+          font-family: "gilroy-bold";
+          margin-bottom: 15px;
+
+          @media screen and (max-width: 991px) {
+            font-size: 20px;
+          }
+        }
+
+        &-text {
+          font-size: 16px;
+          color: $gray;
+        }
+      }
+    }
+  }
+}
